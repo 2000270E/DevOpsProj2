@@ -40,6 +40,22 @@ public class NewTest {
 		Assert.assertTrue(webDriver.getTitle().contains("Employee Management"));
 		System.out.println("new title: " + webDriver.getTitle());
 	}
+	
+	@Test
+	public void checkEditTitle() {
+		// Load website as a new page
+		webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
+
+		// Retrieve link using it's class name and click on it
+		webDriver.findElement(By.className("link")).click();
+		webDriver.findElement(By.className("edit")).click();
+
+		// Assert the new title to check that the title contain Employee Management and
+		// the button had successfully bring us to the new page
+		// Assert the title to check that we are indeed in the correct website
+		Assert.assertEquals(webDriver.getTitle(), "Workers Management Application");
+		System.out.println("Edit title: " + webDriver.getTitle());
+	}
 
 	@Test(priority = 1)
 	public void addEmployee() {

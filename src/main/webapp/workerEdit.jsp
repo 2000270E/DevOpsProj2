@@ -18,7 +18,7 @@
 		<div>
 			<a class="navbar-brand"> Worker Management Application </a>
 		</div>
-		<ul class="navbar-nav">
+		<ul name='dashboard' class="navbar-nav">
 			<li><a
 				href="<%=request.getContextPath()%>/WorkerManageServlet/dashboard"
 				class="nav-link">Back to Dashboard</a></li>

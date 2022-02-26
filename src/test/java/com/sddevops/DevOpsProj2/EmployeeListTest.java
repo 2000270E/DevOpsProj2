@@ -151,9 +151,9 @@ class EmployeeListTest {
 		Employee validEmployee = sc.findEmployeesById("0003");
 		Employee invalidEmployee = sc.findEmployeesById("Invalid Id");
 
-		// Assert we retrieve a valid Song
+		// Assert we retrieve a valid Employee
 		assertNotNull(validEmployee);
-		// Assert we retrieve the accurate Song base on Id
+		// Assert we retrieve the accurate Employee base on Id
 		assertEquals(validEmployee.getName(), "Worker_3");
 		// Assert we get a null when we input a invalid Id
 		assertNull(invalidEmployee);
@@ -171,11 +171,11 @@ class EmployeeListTest {
 		Employee validEmployee = sc.findEmployeesByName("Worker_3");
 		Employee invalidEmployee = sc.findEmployeesByName("Worker doesn't exists");
 
-		// Assert we retrieve a valid Song
+		// Assert we retrieve a valid Employee
 		assertNotNull(validEmployee);
-		// Assert we retrieve the accurate Song base on Id
+		// Assert we retrieve the accurate Employee base on Id
 		assertEquals(validEmployee.getId(), "0003");
-		// Assert we get a null when we input a invalid Title
+		// Assert we get a null when we input a invalid Name
 		assertNull(invalidEmployee);
 	}
 
@@ -190,11 +190,11 @@ class EmployeeListTest {
 		Employee validEmployee = sc.findEmployeeByRole("Designer");
 		Employee invalidEmployee = sc.findEmployeeByRole("Role doesn't exists");
 
-		// Assert we retrieve a valid Song
+		// Assert we retrieve a valid Employee
 		assertNotNull(validEmployee);
-		// Assert we retrieve the accurate Song base on Id
+		// Assert we retrieve the accurate Employee base on Id
 		assertEquals(validEmployee.getName(), "Worker_4");
-		// Assert we get a null when we input a invalid Title
+		// Assert we get a null when we input a invalid Role
 		assertNull(invalidEmployee);
 	}
 
